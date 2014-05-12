@@ -1,0 +1,33 @@
+/*  White Room
+
+    Sample floor-plan file for Rossum's Playhouse
+    This encoding is based on the RP1 rev 0.4 floor plan format.
+
+*/
+
+
+units: meters;
+caption:"White Room (RP1 rev. 0.4)";
+
+wall a { geometry:   0.0,   0.0,     3.0,   0.0,   0.05;  }
+wall b { geometry:   3.0,   0.0,     3.0,   3.0,   0.05;  }
+wall c { geometry:   3.0,   3.0,     0.0,   3.0,   0.05;  }
+wall d { geometry:   0.0,   3.0,     0.0,   0.0,   0.05;  }
+
+wall e { geometry:   1.0,   2.0,     2.0,   1.0,   0.025;}
+
+target goal {
+   label:     "Goal";   // F is for fire
+   geometry:   0.4, 0.4, 0.25;
+   color:      red;
+   lineWidth:  3;
+}
+
+placement home {
+   label:     "Home";
+   geometry:  2.5, 2.5, 225, 0.275;
+   color:     green;
+   lineWidth: 3;
+}
+
+

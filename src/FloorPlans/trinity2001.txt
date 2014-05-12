@@ -1,0 +1,117 @@
+/*
+
+    Sample floor-plan file for Trinity Fire-Fighting Robot Contest 2001.
+    Copyright (C) 1997, 1998, 1999, 2000 Trinity College.
+
+    This encoding is based on the RP1 rev 0.4x floor plan format.
+
+    Note:  The new Trinity college web page now shows the floor
+           plan dimensioned in metric units rather than inches.
+           The floor plan hasn't changed, it's just a little more
+           international in its point of view.
+
+           I haven't changed this file, but if you wish to view the
+           floor plan in meters rather than inches, just click on
+           the Units option under the "View" button on the main
+           menu bar.
+
+           See http://www.trincoll.edu/events/robot for more information.
+
+*/
+
+
+units: inches;
+caption:"Fire-Fighting Robot Contest -- April 22, 2001";
+
+wall a { geometry:   0.0,   0.0,    98.0,   0.0,   0.75;  }
+wall b { geometry:  98.0,   0.0,    98.0,  98.0,   0.75;  }
+wall c { geometry:  98.0,  98.0,     0.0,  98.0,   0.75;  }
+wall d { geometry:   0.0,  98.0,     0.0,   0.0,   0.75;  }
+
+wall e { geometry:   0.0,  51.0,    31.0,  51.0,   0.75;  }
+wall f { geometry:  31.0,  51.0,    31.0,  18.0,   0.75;  }
+
+wall g { geometry:  49.0,   0.0,    49.0,  17.0,   0.75;  }
+wall h { geometry:  49.0,  35.0,    98.0,  35.0,   0.75;  }
+wall i { geometry:  31.0,  98.0,    31.0,  73.0,   0.75;  }
+wall j { geometry:  31.0,  73.0,    18.0,  73.0,   0.75;  }
+
+wall k { geometry:  49.0,  80.0,    49.0,  56.0,   0.75;  }
+wall l { geometry:  49.0,  56.0,    80.0,  56.0,   0.75;  }
+wall m { geometry:  80.0,  56.0,    80.0,  80.0,   0.75;  }
+wall n { geometry:  80.0,  80.0,    70.5,  80.0,   0.75;  }
+
+
+
+target F1 {
+   label:     "F1";   // F is for fire
+   geometry:   15, 39, 6;
+   color:      red;
+   lineWidth:  3;
+}
+
+target F2 {
+   label:     "F2";
+   geometry:   71.4, 65.15, 6;
+   color:      red;
+   lineWidth:  3;
+}
+
+target F3 {
+   label:     "F3";
+   geometry:   87.1, 10.9, 6;
+   color:      red;
+   lineWidth:  3;
+}
+
+target F4 {
+   label:     "F4";
+   geometry:   23.1, 82.3, 6;
+   color:      red;
+   lineWidth:  3;
+}
+
+
+
+placement home {
+   label:     "H";
+   geometry:  89.8, 46.0, 180, 6;
+   color:     green;
+   lineWidth: 3;
+}
+
+
+node n0           { geometry:  13.0, 11.0; label: "n0";  }
+node n1           { geometry:  40.0, 11.0; label: "n1";  }
+node CheckPoint3  { geometry:  70.0, 20.0; label: "ChkPt3";  }
+node n3           { geometry:  40.0, 26.0; label: "n3";  }
+node n4           { geometry:  61.0, 26.0; label: "n4";  }
+node CheckPoint0  { geometry:  13.0, 25.5; label: "ChkPt0";  }
+node n6           { geometry:  40.0, 46.0; label: "n6";  }
+node n7           { geometry:  89.8, 46.0; label: "n7";  }
+node n8           { geometry:   9.0, 64.0; label: "n8";  }
+node n9           { geometry:  40.0, 64.0; label: "n9";  }
+node n10          { geometry:  59.5, 77.75;label: "n10"; }
+node CheckPoint2  { geometry:  64.25,70.0; label: "ChkPt2"; }
+node CheckPoint1  { geometry:   9.0, 89.0; label: "ChlPt1"; }
+node n12          { geometry:  40.0, 89.0; label: "n12"; }
+node n13          { geometry:  56.0, 89.0; label: "n13"; }
+node n14          { geometry:  89.8, 89.0; label: "n14"; }
+
+link p0  { nodes:    n0,   n1; }
+link p1  { nodes:    n0,   CheckPoint0; }
+link p2  { nodes:    n1,   n3; }
+link p3  { nodes:    n3,   n4; }
+link p4  { nodes:    n4,   CheckPoint3; }
+link p5  { nodes:    n3,   n6; }
+link p6  { nodes:    n6,   n7; }
+link p7  { nodes:    n7,  n14; }
+link p8  { nodes:    n6,   n9; }
+link p9  { nodes:    n9,   n8; }
+link p10 { nodes:    n8,  CheckPoint1; }
+link p11 { nodes:    n9,  n12; }
+link p12 { nodes:   n12,  n13; }
+link p13 { nodes:   n10,  n13; }
+link p14 { nodes:   n10,  CheckPoint2; }
+link p17 { nodes:   n13,  n14; }
+

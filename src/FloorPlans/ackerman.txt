@@ -1,0 +1,21 @@
+
+
+units: meters;
+caption:"Test Plan for Ackerman";
+
+wall a { geometry:   0.0,   0.0,     5.0,   0.0,   0.02;  }
+wall b { geometry:   5.0,   0.0,     5.0,   5.0,   0.02;  }
+wall c { geometry:   5.0,   5.0,     0.0,   5.0,   0.02;  }
+wall d { geometry:   0.0,   5.0,     0.0,   0.0,   0.02;  }
+
+
+
+placement home {
+   label:     "H";
+   geometry:  2.5, 2.5, 180, 0.2;
+   color:     green;
+   lineWidth: 3;
+}
+
+
+

@@ -1,0 +1,60 @@
+/*  FourCorners
+
+    Sample floor-plan file for RP1
+
+    This floor plan was written to test the ability
+    of RP1 to place a robot at random on a placement
+    or at a random x/y position.
+
+*/
+
+
+units: meters;
+caption:"Four Corners";
+
+wall a { geometry:   0.0,   0.0,     3.0,   0.0,   0.05;  }
+wall b { geometry:   3.0,   0.0,     3.0,   3.0,   0.05;  }
+wall c { geometry:   3.0,   3.0,     0.0,   3.0,   0.05;  }
+wall d { geometry:   0.0,   3.0,     0.0,   0.0,   0.05;  }
+
+obstacle x {
+
+    geometry:   0.0, 0.0, 1.0, 0.0, 0.5, 0.866;
+    offset:     1.0, 1.0;
+    orientation: 15;
+    }
+
+obstacle y {
+   polygon: 6, 0.25;
+   offset:  0.5, 2.25;
+   fillColor:   orange;
+   lineColor:   red;
+}
+
+placement pa {
+   label:     "A";
+   geometry:  0.2, 0.2, 45, 0.15;
+   color:     green;
+   lineWidth: 3;
+}
+
+placement pb {
+   label:     "B";
+   geometry:  2.84, 0.16, 135, 0.15;
+   color:     green;
+   lineWidth: 3;
+}
+
+placement pc {
+   label:     "C";
+   geometry:  2.50, 2.50, 225, 0.15;
+   color:     green;
+   lineWidth: 3;
+}
+
+placement pd {
+   label:     "D";
+   geometry:  0.16, 2.84, -45, 0.15;
+   color:     green;
+   lineWidth: 3;
+}
